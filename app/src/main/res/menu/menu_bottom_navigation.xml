@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_hoy" android:icon="@drawable/ic_alarm" android:title="@string/hoy" />
+    <item android:id="@+id/nav_pendientes" android:icon="@drawable/ic_notifications" android:title="@string/pendientes" />
+    <item android:id="@+id/nav_crear" android:icon="@drawable/ic_add" android:title="@string/crear" />
+    <item android:id="@+id/nav_calendario" android:icon="@drawable/ic_calendar" android:title="@string/calendario" />
+    <item android:id="@+id/nav_ajustes" android:icon="@drawable/ic_settings" android:title="@string/ajustes" />
+</menu>

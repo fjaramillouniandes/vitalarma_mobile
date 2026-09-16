@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tamaños -->
+    <dimen name="text_display_small">36sp</dimen>
+    <dimen name="text_headline_large">32sp</dimen>
+    <dimen name="text_headline_medium">28sp</dimen>
+    <dimen name="text_title_large">22sp</dimen>
+    <dimen name="text_title_medium">16sp</dimen>
+    <dimen name="text_body_large">16sp</dimen>
+    <dimen name="text_body_medium">14sp</dimen>
+    <dimen name="text_label_large">14sp</dimen>
+    <dimen name="text_label_medium">12sp</dimen>
+    <dimen name="text_label_small">11sp</dimen>
+
+    <!-- Alturas de línea -->
+    <dimen name="line_display_small">44sp</dimen>
+    <dimen name="line_headline_large">40sp</dimen>
+    <dimen name="line_headline_medium">36sp</dimen>
+    <dimen name="line_title_large">28sp</dimen>
+    <dimen name="line_title_medium">24sp</dimen>
+    <dimen name="line_body_large">24sp</dimen>
+    <dimen name="line_body_medium">20sp</dimen>
+    <dimen name="line_label_large">20sp</dimen>
+    <dimen name="line_label_medium">16sp</dimen>
+    <dimen name="line_label_small">16sp</dimen>
+
+    <!-- Regular -->
+    <style name="TextAppearance.Vitalarma.DisplaySmall" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">@dimen/text_display_small</item>
+        <item name="lineHeight">@dimen/line_display_small</item>
+    </style>
+    <style name="TextAppearance.Vitalarma.HeadlineLarge" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">@dimen/text_headline_large</item>
+        <item name="lineHeight">@dimen/line_headline_large</item>
+    </style>
+    <style name="TextAppearance.Vitalarma.HeadlineMedium" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">@dimen/text_headline_medium</item>
+        <item name="lineHeight">@dimen/line_headline_medium</item>
+    </style>
+    <style name="TextAppearance.Vitalarma.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">@dimen/text_body_large</item>
+        <item name="lineHeight">@dimen/line_body_large</item>
+    </style>
+    <style name="TextAppearance.Vitalarma.BodyMedium" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">@dimen/text_body_medium</item>
+        <item name="lineHeight">@dimen/line_body_medium</item>
+    </style>
+
+    <!-- Medium -->
+    <style name="TextAppearance.Vitalarma.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">@dimen/text_title_large</item>
+        <item name="lineHeight">@dimen/line_title_large</item>
+    </style>
+    <style name="TextAppearance.Vitalarma.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">@dimen/text_title_medium</item>
+        <item name="lineHeight">@dimen/line_title_medium</item>
+    </style>
+    <style name="TextAppearance.Vitalarma.LabelLarge" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">@dimen/text_label_large</item>
+        <item name="lineHeight">@dimen/line_label_large</item>
+    </style>
+    <style name="TextAppearance.Vitalarma.LabelMedium" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">@dimen/text_label_medium</item>
+        <item name="lineHeight">@dimen/line_label_medium</item>
+    </style>
+    <style name="TextAppearance.Vitalarma.LabelSmall" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">@dimen/text_label_small</item>
+        <item name="lineHeight">@dimen/line_label_small</item>
+    </style>
+</resources>

@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Vitalarma</string>
+    <string name="hoy">Hoy</string>
+    <string name="fecha_hoy">Viernes, 4 de septiembre</string>
+    <string name="advertencia">Advertencia</string>
+    <string name="advertencia_permiso">Esta alarma puede quedar en silencio. Activa el permiso de alarmas prioritarias.</string>
+    <string name="proxima_alerta">Próxima alerta</string>
+    <string name="despues">Después</string>
+    <string name="cita_medica">Cita médica</string>
+    <string name="crear_recordatorio">Crear recordatorio</string>
+    <string name="completa_informacion">Completa la información principal</string>
+    <string name="corrige_campo">Corrige el campo marcado</string>
+    <string name="nombre_obligatorio">Nombre*</string>
+    <string name="maximo_caracteres">Máximo 60 caracteres</string>
+    <string name="nombre_requerido">El nombre es obligatorio</string>
+    <string name="fecha">Fecha</string>
+    <string name="fecha_recordatorio">5 de septiembre de 2026</string>
+    <string name="hora">Hora</string>
+    <string name="hora_recordatorio">3:00 p. m.</string>
+    <string name="repetir_semanalmente">Repetir semanalmente</string>
+    <string name="dias">Días</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="continuar">Continuar</string>
+    <string name="pendientes">Pendientes</string>
+    <string name="crear">Crear</string>
+    <string name="calendario">Calendario</string>
+    <string name="ajustes">Ajustes</string>
+    <string name="vista_pendiente">Vista pendiente de maquetación</string>
+</resources>
