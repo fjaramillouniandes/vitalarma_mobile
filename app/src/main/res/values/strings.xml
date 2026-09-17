@@ -32,4 +32,18 @@
     <string name="avisos_configurados">Avisos: 15 mins y 1 hora</string>
     <string name="estado_activo">Activo</string>
     <string name="hora_cita_hoy">Hoy · 3:00 p.m. </string>
+    <string name="selecciona_dias">Selecciona los días en que se repetirá.</string>
+    <string name="dia_lunes_corto">L</string>
+    <string name="dia_martes_corto">M</string>
+    <string name="dia_miercoles_corto">X</string>
+    <string name="dia_jueves_corto">J</string>
+    <string name="dia_viernes_corto">V</string>
+    <string name="dia_sabado_corto">S</string>
+    <string name="dia_domingo_corto">D</string>
+    <string name="error_nombre_obligatorio">El nombre es obligatorio</string>
+    <string name="error_maximos_caracteres">Máximo 60 caracteres</string>
+    <string name="seleccionar_fecha">Seleccionar fecha</string>
+    <string name="seleccionar_hora">Seleccionar hora</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="recordatorio_valido">Información válida</string>
 </resources>

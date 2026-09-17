@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vitalarma">
         <activity
+            android:name=".CrearRecordatorioActivity"
+            android:exported="false" />
+        <activity
             android:name=".HoyActivity"
             android:exported="true">
             <intent-filter>

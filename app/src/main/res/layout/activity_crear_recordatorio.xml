@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface"
+    tools:context=".CrearRecordatorioActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/surface"
+        app:elevation="0dp"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:navigationIconTint="@color/on_surface"
+        app:title="@string/crear_recordatorio"
+        app:titleTextAppearance="@style/TextAppearance.Vitalarma.TitleLarge"
+        app:titleTextColor="@color/on_surface"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollFormulario"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/topAppBar"
+        app:layout_constraintBottom_toTopOf="@id/filaAcciones"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/contenidoFormulario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/space_4"
+            android:paddingTop="@dimen/space_2"
+            android:paddingEnd="@dimen/space_4"
+            android:paddingBottom="@dimen/space_5">
+
+            <TextView
+                android:id="@+id/textoIntroduccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/completa_informacion"
+                android:textAppearance="@style/TextAppearance.Vitalarma.BodyMedium"
+                android:textColor="@color/on_surface_variant" />
+
+            <!-- Nombre -->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutNombre"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_5"
+                android:hint="@string/nombre_obligatorio"
+                app:boxBackgroundColor="@color/surface"
+                app:boxStrokeColor="@color/primary"
+                app:helperText="@string/maximo_caracteres"
+                app:helperTextTextAppearance="@style/TextAppearance.Vitalarma.LabelSmall">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences"
+                    android:maxLength="60"
+                    android:singleLine="true"
+                    android:textAppearance="@style/TextAppearance.Vitalarma.BodyLarge"
+                    android:textColor="@color/on_surface" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Fecha -->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutFecha"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_4"
+                android:hint="@string/fecha"
+                app:boxBackgroundColor="@color/surface"
+                app:endIconDrawable="@drawable/ic_calendar"
+                app:endIconMode="custom"
+                app:endIconTint="@color/on_surface_variant">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputFecha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:singleLine="true"
+                    android:text="@string/fecha_recordatorio"
+                    android:textAppearance="@style/TextAppearance.Vitalarma.BodyLarge"
+                    android:textColor="@color/on_surface" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Hora -->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutHora"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_4"
+                android:hint="@string/hora"
+                app:boxBackgroundColor="@color/surface"
+                app:endIconDrawable="@drawable/ic_schedule"
+                app:endIconMode="custom"
+                app:endIconTint="@color/on_surface_variant">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputHora"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:singleLine="true"
+                    android:text="@string/hora_recordatorio"
+                    android:textAppearance="@style/TextAppearance.Vitalarma.BodyLarge"
+                    android:textColor="@color/on_surface" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- dias de la semanal -->
+
+            <LinearLayout
+                android:id="@+id/filaRepeticion"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/touch_target"
+                android:layout_marginTop="@dimen/space_5"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/repetir_semanalmente"
+                    android:textAppearance="@style/TextAppearance.Vitalarma.BodyLarge"
+                    android:textColor="@color/on_surface" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchRepetir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/touch_target"
+                    android:checked="true"
+                    android:contentDescription="@string/repetir_semanalmente" />
+
+            </LinearLayout>
+
+            <!-- letras de días -->
+
+            <TextView
+                android:id="@+id/tituloDias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_4"
+                android:text="@string/dias"
+                android:textAppearance="@style/TextAppearance.Vitalarma.TitleMedium"
+                android:textColor="@color/on_surface" />
+
+            <TextView
+                android:id="@+id/explicacionDias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:text="@string/selecciona_dias"
+                android:textAppearance="@style/TextAppearance.Vitalarma.BodyMedium"
+                android:textColor="@color/on_surface_variant" />
+
+            <!-- Selector de días -->
+
+            <HorizontalScrollView
+                android:id="@+id/scrollDias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_3"
+                android:clipToPadding="false"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/contenedorDias"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/diaLunes"
+                        style="@style/Widget.Material3.Button.TonalButton"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginEnd="@dimen/space_1"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minWidth="0dp"
+                        android:padding="0dp"
+                        android:text="@string/dia_lunes_corto"
+                        android:textAppearance="@style/TextAppearance.Vitalarma.LabelMedium"
+                        android:textColor="@color/on_primary"
+                        app:backgroundTint="@color/primary"
+                        android:checkable="true"
+                        app:cornerRadius="22dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/diaMartes"
+                        style="@style/Widget.Material3.Button.TonalButton"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginHorizontal="@dimen/space_1"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minWidth="0dp"
+                        android:padding="0dp"
+                        android:text="@string/dia_martes_corto"
+                        android:textAppearance="@style/TextAppearance.Vitalarma.LabelMedium"
+                        android:textColor="@color/on_primary"
+                        app:backgroundTint="@color/primary"
+                        android:checkable="true"
+                        app:cornerRadius="22dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/diaMiercoles"
+                        style="@style/Widget.Material3.Button.TonalButton"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginHorizontal="@dimen/space_1"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minWidth="0dp"
+                        android:padding="0dp"
+                        android:text="@string/dia_miercoles_corto"
+                        android:textAppearance="@style/TextAppearance.Vitalarma.LabelMedium"
+                        android:textColor="@color/on_primary"
+                        app:backgroundTint="@color/primary"
+                        android:checkable="true"
+                        app:cornerRadius="22dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/diaJueves"
+                        style="@style/Widget.Material3.Button.TonalButton"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginHorizontal="@dimen/space_1"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minWidth="0dp"
+                        android:padding="0dp"
+                        android:text="@string/dia_jueves_corto"
+                        android:textAppearance="@style/TextAppearance.Vitalarma.LabelMedium"
+                        android:textColor="@color/on_primary"
+                        app:backgroundTint="@color/primary"
+                        android:checkable="true"
+                        app:cornerRadius="22dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/diaViernes"
+                        style="@style/Widget.Material3.Button.TonalButton"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginHorizontal="@dimen/space_1"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minWidth="0dp"
+                        android:padding="0dp"
+                        android:text="@string/dia_viernes_corto"
+                        android:textAppearance="@style/TextAppearance.Vitalarma.LabelMedium"
+                        android:textColor="@color/on_primary"
+                        app:backgroundTint="@color/primary"
+                        android:checkable="true"
+                        app:cornerRadius="22dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/diaSabado"
+                        style="@style/Widget.Material3.Button.TonalButton"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginHorizontal="@dimen/space_1"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minWidth="0dp"
+                        android:padding="0dp"
+                        android:text="@string/dia_sabado_corto"
+                        android:textAppearance="@style/TextAppearance.Vitalarma.LabelMedium"
+                        android:textColor="@color/on_primary"
+                        app:backgroundTint="@color/primary"
+                        android:checkable="true"
+                        app:cornerRadius="22dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/diaDomingo"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="@dimen/space_1"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minWidth="0dp"
+                        android:padding="0dp"
+                        android:text="@string/dia_domingo_corto"
+                        android:textAppearance="@style/TextAppearance.Vitalarma.LabelMedium"
+                        android:textColor="@color/primary"
+                        app:backgroundTint="@color/surface_container"
+                        android:checkable="true"
+                        app:cornerRadius="22dp" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- botones -->
+
+    <LinearLayout
+        android:id="@+id/filaAcciones"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:background="@color/surface"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/space_4"
+        android:paddingEnd="@dimen/space_4"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancelar"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/touch_target"
+            android:text="@string/cancelar"
+            android:textAppearance="@style/TextAppearance.Vitalarma.LabelLarge"
+            android:textColor="@color/primary"
+            app:cornerRadius="@dimen/corner_large"
+            app:backgroundTint="@color/surface_container"
+            app:strokeColor="@color/primary" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnContinuar"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/touch_target"
+            android:text="@string/continuar"
+            android:textAppearance="@style/TextAppearance.Vitalarma.LabelLarge"
+            android:textColor="@color/on_primary"
+            app:backgroundTint="@color/primary"
+            app:cornerRadius="@dimen/corner_large" />
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/view_bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/bottom_navigation_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
