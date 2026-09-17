@@ -46,4 +46,19 @@
     <string name="seleccionar_hora">Seleccionar hora</string>
     <string name="aceptar">Aceptar</string>
     <string name="recordatorio_valido">Información válida</string>
+    <string name="avisos_anticipados">Avisos anticipados</string>
+    <string name="explicacion_avisos">Elige cuándo quieres recibir avisos antes de la hora principal.</string>
+    <string name="anticipacion">Anticipación</string>
+    <string name="cinco_minutos">5 min</string>
+    <string name="quince_minutos">15 min</string>
+    <string name="una_hora">1 hora</string>
+    <string name="cinco_minutos_antes">5 min antes</string>
+    <string name="quince_minutos_antes">15 min antes</string>
+    <string name="una_hora_antes">1 hora antes</string>
+    <string name="cronologia">Cronología</string>
+    <string name="hora_primer_aviso">2:00 p. m. - aviso</string>
+    <string name="hora_segundo_aviso">3:00 p. m. - aviso</string>
+    <string name="repetir">Repetir</string>
+    <string name="selecciona_un_aviso">Selecciona al menos un aviso</string>
+    <string name="avisos_guardados">Avisos configurados</string>
 </resources>

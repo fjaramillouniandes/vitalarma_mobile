@@ -262,13 +262,12 @@ public class CrearRecordatorioActivity extends AppCompatActivity {
                 return;
             }
 
-            Toast.makeText(
-                    this,
-                    R.string.recordatorio_valido,
-                    Toast.LENGTH_SHORT
-            ).show();
+            Intent intent = new Intent(
+                    CrearRecordatorioActivity.this,
+                    AnticipacionActivity.class
+            );
 
-            // Aquí navegaremos a la siguiente pantalla.
+            startActivity(intent);
         });
     }
 
