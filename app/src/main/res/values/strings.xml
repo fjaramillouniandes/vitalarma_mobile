@@ -26,4 +26,10 @@
     <string name="calendario">Calendario</string>
     <string name="ajustes">Ajustes</string>
     <string name="vista_pendiente">Vista pendiente de maquetación</string>
+    <string name="estado_proximo">Próximo</string>
+    <string name="hora_cita_manana">Mañana · 3:00 p. m. </string>
+    <string name="proxima_alerta_hora">Próxima alerta: 2:45 p.m. </string>
+    <string name="avisos_configurados">Avisos: 15 mins y 1 hora</string>
+    <string name="estado_activo">Activo</string>
+    <string name="hora_cita_hoy">Hoy · 3:00 p.m. </string>
 </resources>

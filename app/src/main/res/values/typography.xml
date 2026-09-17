@@ -77,4 +77,14 @@
         <item name="android:textSize">@dimen/text_label_small</item>
         <item name="lineHeight">@dimen/line_label_small</item>
     </style>
+
+    <style
+        name="TextAppearance.Vitalarma.BottomNavigation"
+        parent="TextAppearance.Material3.LabelSmall">
+
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">normal</item>
+
+    </style>
 </resources>

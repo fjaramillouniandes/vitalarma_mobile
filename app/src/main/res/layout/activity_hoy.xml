@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface"
+    tools:context=".HoyActivity">
+
+    <!-- Contenido desplazable -->
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollContenido"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/contenidoHoy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/space_4"
+            android:paddingTop="@dimen/space_4"
+            android:paddingEnd="@dimen/space_4"
+            android:paddingBottom="@dimen/space_5">
+
+            <!-- Encabezado -->
+
+            <TextView
+                android:id="@+id/tituloHoy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hoy"
+                android:textAppearance="@style/TextAppearance.Vitalarma.TitleLarge"
+                android:textColor="@color/on_surface" />
+
+            <TextView
+                android:id="@+id/textoFecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:text="@string/fecha_hoy"
+                android:textAppearance="@style/TextAppearance.Vitalarma.BodyMedium"
+                android:textColor="@color/on_surface_variant" />
+
+            <!-- Banner de advertencia -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardAdvertencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_5"
+                app:cardBackgroundColor="@color/warning_container"
+                app:cardCornerRadius="@dimen/corner_medium"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/space_4">
+
+                    <ImageView
+                        android:id="@+id/iconoAdvertencia"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:contentDescription="@string/advertencia"
+                        android:src="@drawable/ic_warning"
+                        app:tint="@color/warning" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_3"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tituloAdvertencia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/advertencia"
+                            android:textAppearance="@style/TextAppearance.Vitalarma.TitleMedium"
+                            android:textColor="@color/on_warning_container" />
+
+                        <TextView
+                            android:id="@+id/textoAdvertencia"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_1"
+                            android:text="@string/advertencia_permiso"
+                            android:textAppearance="@style/TextAppearance.Vitalarma.BodyMedium"
+                            android:textColor="@color/on_warning_container" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Sección Próxima alerta -->
+
+            <TextView
+                android:id="@+id/tituloProximaAlerta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_5"
+                android:text="@string/proxima_alerta"
+                android:textAppearance="@style/TextAppearance.Vitalarma.TitleLarge"
+                android:textColor="@color/on_surface" />
+
+            <!-- Tarjeta próxima alerta -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardProximaAlerta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_3"
+                app:cardBackgroundColor="@color/surface_container"
+                app:cardCornerRadius="@dimen/corner_medium"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/outline_variant"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_4">
+
+                    <!-- Etiqueta Próximo -->
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/primary_container"
+                        app:cardCornerRadius="@dimen/corner_large"
+                        app:cardElevation="0dp"
+                        app:strokeWidth="0dp">
+
+                        <TextView
+                            android:id="@+id/estadoProximaAlerta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/space_3"
+                            android:paddingTop="@dimen/space_1"
+                            android:paddingEnd="@dimen/space_3"
+                            android:paddingBottom="@dimen/space_1"
+                            android:text="@string/estado_proximo"
+                            android:textAppearance="@style/TextAppearance.Vitalarma.LabelMedium"
+                            android:textColor="@color/primary" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/tituloProximoRecordatorio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_3"
+                        android:text="@string/cita_medica"
+                        android:textAppearance="@style/TextAppearance.Vitalarma.TitleMedium"
+                        android:textColor="@color/on_surface" />
+
+                    <TextView
+                        android:id="@+id/horaProximoRecordatorio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_1"
+                        android:text="@string/hora_cita_manana"
+                        android:textAppearance="@style/TextAppearance.Vitalarma.BodyMedium"
+                        android:textColor="@color/on_surface_variant" />
+
+                    <TextView
+                        android:id="@+id/proximoAvisoRecordatorio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_1"
+                        android:text="@string/proxima_alerta_hora"
+                        android:textAppearance="@style/TextAppearance.Vitalarma.BodyMedium"
+                        android:textColor="@color/on_surface_variant" />
+
+                    <TextView
+                        android:id="@+id/avisosProximoRecordatorio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_2"
+                        android:text="@string/avisos_configurados"
+                        android:textAppearance="@style/TextAppearance.Vitalarma.LabelSmall"
+                        android:textColor="@color/on_surface_variant" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Sección Después -->
+
+            <TextView
+                android:id="@+id/tituloDespues"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_5"
+                android:text="@string/despues"
+                android:textAppearance="@style/TextAppearance.Vitalarma.TitleLarge"
+                android:textColor="@color/on_surface" />
+
+            <!-- Tarjeta activa -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardRecordatorioActivo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_3"
+                app:cardBackgroundColor="@color/surface_container"
+                app:cardCornerRadius="@dimen/corner_medium"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/success"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_4">
+
+                    <!-- Etiqueta Activo -->
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/success_container"
+                        app:cardCornerRadius="@dimen/corner_large"
+                        app:cardElevation="0dp"
+                        app:strokeWidth="0dp">
+
+                        <TextView
+                            android:id="@+id/estadoRecordatorioActivo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/space_3"
+                            android:paddingTop="@dimen/space_1"
+                            android:paddingEnd="@dimen/space_3"
+                            android:paddingBottom="@dimen/space_1"
+                            android:text="@string/estado_activo"
+                            android:textAppearance="@style/TextAppearance.Vitalarma.LabelMedium"
+                            android:textColor="@color/on_success_container" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/tituloRecordatorioActivo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_3"
+                        android:text="@string/cita_medica"
+                        android:textAppearance="@style/TextAppearance.Vitalarma.TitleMedium"
+                        android:textColor="@color/on_surface" />
+
+                    <TextView
+                        android:id="@+id/horaRecordatorioActivo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_1"
+                        android:text="@string/hora_cita_hoy"
+                        android:textAppearance="@style/TextAppearance.Vitalarma.BodyMedium"
+                        android:textColor="@color/on_surface_variant" />
+
+                    <TextView
+                        android:id="@+id/proximoAvisoActivo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_1"
+                        android:text="@string/proxima_alerta_hora"
+                        android:textAppearance="@style/TextAppearance.Vitalarma.BodyMedium"
+                        android:textColor="@color/on_surface_variant" />
+
+                    <TextView
+                        android:id="@+id/avisosRecordatorioActivo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_2"
+                        android:text="@string/avisos_configurados"
+                        android:textAppearance="@style/TextAppearance.Vitalarma.LabelSmall"
+                        android:textColor="@color/on_surface_variant" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    <!-- Botón principal -->
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCrearRecordatorio"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/touch_target"
+        android:layout_marginEnd="@dimen/space_4"
+        android:layout_marginBottom="@dimen/space_5"
+        android:text="@string/crear_recordatorio"
+        android:textAppearance="@style/TextAppearance.Vitalarma.LabelLarge"
+        android:textColor="@color/on_primary"
+        app:backgroundTint="@color/primary"
+        app:cornerRadius="@dimen/corner_large"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Navegación inferior -->
+
+    <include
+        layout="@layout/view_bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/bottom_navigation_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
