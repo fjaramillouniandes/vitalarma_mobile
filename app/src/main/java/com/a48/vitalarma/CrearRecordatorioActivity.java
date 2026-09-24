@@ -290,6 +290,11 @@ public class CrearRecordatorioActivity extends AppCompatActivity {
                 return true;
             }
 
+            if (id == R.id.nav_ajustes) {
+                AjustesActivity.abrir(this);
+                return true;
+            }
+
             if (id == R.id.nav_hoy) {
                 volverAHoy();
                 return true;

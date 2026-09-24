@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Vitalarma.Ajustes.Seccion" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">@dimen/space_2</item>
+        <item name="android:textAppearance">@style/TextAppearance.Vitalarma.TitleMedium</item>
+        <item name="android:textColor">@color/on_surface</item>
+    </style>
+
+    <style name="Vitalarma.Ajustes.Grupo" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/space_3</item>
+        <item name="cardBackgroundColor">@color/surface_container</item>
+        <item name="cardCornerRadius">@dimen/corner_large</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeColor">@color/outline_variant</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <style name="Vitalarma.Ajustes.Fila" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingStart">@dimen/space_3</item>
+        <item name="android:paddingTop">@dimen/space_2</item>
+        <item name="android:paddingEnd">@dimen/space_3</item>
+        <item name="android:paddingBottom">@dimen/space_2</item>
+    </style>
+
+    <style name="Vitalarma.Ajustes.Icono" parent="">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:importantForAccessibility">no</item>
+        <item name="tint">@color/outline</item>
+    </style>
+
+    <style name="Vitalarma.Ajustes.Textos" parent="">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginStart">@dimen/space_4</item>
+        <item name="android:layout_marginEnd">@dimen/space_3</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="Vitalarma.Ajustes.Titulo" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/TextAppearance.Vitalarma.BodyLarge</item>
+        <item name="android:textColor">@color/on_surface_variant</item>
+    </style>
+
+    <style name="Vitalarma.Ajustes.Descripcion" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/TextAppearance.Vitalarma.LabelLarge</item>
+        <item name="android:textColor">@color/on_surface_variant</item>
+    </style>
+
+    <style name="Vitalarma.Ajustes.Switch" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="thumbTint">@color/switch_thumb</item>
+        <item name="trackTint">@color/switch_track</item>
+        <item name="trackDecorationTint">@color/switch_track_decoration</item>
+    </style>
+
+    <style name="Vitalarma.Ajustes.Boton" parent="Widget.Material3.Button.TonalButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/touch_target</item>
+        <item name="android:textAppearance">@style/TextAppearance.Vitalarma.LabelLarge</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="backgroundTint">@color/primary_container</item>
+        <item name="cornerRadius">@dimen/corner_large</item>
+    </style>
+
+    <style name="Vitalarma.Ajustes.Divisor" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="dividerColor">@color/outline_variant</item>
+        <item name="dividerInsetStart">@dimen/space_3</item>
+        <item name="dividerInsetEnd">@dimen/space_3</item>
+    </style>
+</resources>

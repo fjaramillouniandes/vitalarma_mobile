@@ -78,4 +78,20 @@
     <string name="hora_cita_ayer">Ayer · 3:00 p. m.</string>
     <string name="comprar_tiquetes">Comprar tiquetes</string>
     <string name="felicitar_diego">Felicitar a Diego</string>
+    <string name="alarmas_notificaciones">Alarmas y notificaciones</string>
+    <string name="permiso_alarmas">Permiso de alarmas</string>
+    <string name="activado">Activado</string>
+    <string name="revisar">Revisar</string>
+    <string name="sonidos_y_alertas">Sonidos y alertas</string>
+    <string name="vibracion">Vibración</string>
+    <string name="no_molestar">No molestar</string>
+    <string name="silencia_avisos">Silencia avisos no prioritarios</string>
+    <string name="preferencias">Preferencias</string>
+    <string name="zona_horaria">Zona horaria</string>
+    <string name="zona_horaria_bogota">Bogotá (GMT-5)</string>
+    <string name="cambiar">Cambiar</string>
+    <string name="formato_24_horas">Usar formato 24 horas</string>
+    <string name="accesibilidad">Accesibilidad</string>
+    <string name="texto_grande">Texto grande</string>
+    <string name="aumenta_tamano_lectura">Aumenta el tamaño de lectura</string>
 </resources>

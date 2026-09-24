@@ -150,6 +150,11 @@ public class DetalleRecordatorioActivity extends AppCompatActivity {
                 return false;
             }
 
+            if (item.getItemId() == R.id.nav_ajustes) {
+                AjustesActivity.abrir(this);
+                return false;
+            }
+
             if (item.getItemId() == R.id.nav_crear) {
                 startActivity(new Intent(
                         DetalleRecordatorioActivity.this,

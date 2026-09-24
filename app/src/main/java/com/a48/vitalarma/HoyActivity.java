@@ -86,6 +86,11 @@ public class HoyActivity extends AppCompatActivity {
                 return true;
             }
 
+            if (id == R.id.nav_ajustes) {
+                AjustesActivity.abrir(this);
+                return true;
+            }
+
             if (id == R.id.nav_crear) {
                 abrirCrearRecordatorio();
                 return true;

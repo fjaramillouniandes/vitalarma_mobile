@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface"
+    tools:context=".AjustesActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/surface"
+        app:elevation="0dp"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:navigationIconTint="@color/on_surface"
+        app:title="@string/ajustes"
+        app:titleTextAppearance="@style/TextAppearance.Vitalarma.TitleLarge"
+        app:titleTextColor="@color/on_surface"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollContenido"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/topAppBar"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/space_4"
+            android:paddingTop="@dimen/space_5"
+            android:paddingEnd="@dimen/space_4"
+            android:paddingBottom="@dimen/space_5">
+
+            <TextView
+                style="@style/Vitalarma.Ajustes.Seccion"
+                android:text="@string/alarmas_notificaciones" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/grupoAlarmas"
+                style="@style/Vitalarma.Ajustes.Grupo">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        style="@style/Vitalarma.Ajustes.Fila"
+                        android:minHeight="68dp">
+
+                        <ImageView
+                            style="@style/Vitalarma.Ajustes.Icono"
+                            android:src="@drawable/ic_notifications" />
+
+                        <LinearLayout style="@style/Vitalarma.Ajustes.Textos">
+
+                            <TextView
+                                style="@style/Vitalarma.Ajustes.Titulo"
+                                android:text="@string/permiso_alarmas" />
+
+                            <TextView
+                                android:id="@+id/estadoPermisoAlarmas"
+                                style="@style/Vitalarma.Ajustes.Titulo"
+                                android:text="@string/activado"
+                                android:textColor="@color/success" />
+
+                        </LinearLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnRevisarPermiso"
+                            style="@style/Vitalarma.Ajustes.Boton"
+                            android:text="@string/revisar" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        style="@style/Vitalarma.Ajustes.Divisor" />
+
+                    <LinearLayout style="@style/Vitalarma.Ajustes.Fila">
+
+                        <ImageView
+                            style="@style/Vitalarma.Ajustes.Icono"
+                            android:src="@drawable/ic_volume_up" />
+
+                        <LinearLayout style="@style/Vitalarma.Ajustes.Textos">
+
+                            <TextView
+                                style="@style/Vitalarma.Ajustes.Titulo"
+                                android:text="@string/sonidos_y_alertas" />
+
+                        </LinearLayout>
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/switchSonidos"
+                            style="@style/Vitalarma.Ajustes.Switch"
+                            android:checked="true"
+                            android:contentDescription="@string/sonidos_y_alertas" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        style="@style/Vitalarma.Ajustes.Divisor" />
+
+                    <LinearLayout style="@style/Vitalarma.Ajustes.Fila">
+
+                        <ImageView
+                            style="@style/Vitalarma.Ajustes.Icono"
+                            android:src="@drawable/ic_snooze" />
+
+                        <LinearLayout style="@style/Vitalarma.Ajustes.Textos">
+
+                            <TextView
+                                style="@style/Vitalarma.Ajustes.Titulo"
+                                android:text="@string/vibracion" />
+
+                        </LinearLayout>
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/switchVibracion"
+                            style="@style/Vitalarma.Ajustes.Switch"
+                            android:checked="true"
+                            android:contentDescription="@string/vibracion" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        style="@style/Vitalarma.Ajustes.Divisor" />
+
+                    <LinearLayout style="@style/Vitalarma.Ajustes.Fila">
+
+                        <ImageView
+                            style="@style/Vitalarma.Ajustes.Icono"
+                            android:src="@drawable/ic_do_not_disturb" />
+
+                        <LinearLayout style="@style/Vitalarma.Ajustes.Textos">
+
+                            <TextView
+                                style="@style/Vitalarma.Ajustes.Titulo"
+                                android:text="@string/no_molestar" />
+
+                            <TextView
+                                style="@style/Vitalarma.Ajustes.Descripcion"
+                                android:text="@string/silencia_avisos" />
+
+                        </LinearLayout>
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/switchNoMolestar"
+                            style="@style/Vitalarma.Ajustes.Switch"
+                            android:contentDescription="@string/no_molestar" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                style="@style/Vitalarma.Ajustes.Seccion"
+                android:layout_marginTop="@dimen/space_6"
+                android:text="@string/preferencias" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/grupoPreferencias"
+                style="@style/Vitalarma.Ajustes.Grupo">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        style="@style/Vitalarma.Ajustes.Fila"
+                        android:minHeight="68dp">
+
+                        <ImageView
+                            style="@style/Vitalarma.Ajustes.Icono"
+                            android:src="@drawable/ic_schedule" />
+
+                        <LinearLayout style="@style/Vitalarma.Ajustes.Textos">
+
+                            <TextView
+                                style="@style/Vitalarma.Ajustes.Titulo"
+                                android:text="@string/zona_horaria" />
+
+                            <TextView
+                                style="@style/Vitalarma.Ajustes.Descripcion"
+                                android:text="@string/zona_horaria_bogota" />
+
+                        </LinearLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnCambiarZona"
+                            style="@style/Vitalarma.Ajustes.Boton"
+                            android:text="@string/cambiar" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        style="@style/Vitalarma.Ajustes.Divisor" />
+
+                    <LinearLayout style="@style/Vitalarma.Ajustes.Fila">
+
+                        <ImageView
+                            style="@style/Vitalarma.Ajustes.Icono"
+                            android:src="@drawable/ic_schedule" />
+
+                        <LinearLayout style="@style/Vitalarma.Ajustes.Textos">
+
+                            <TextView
+                                style="@style/Vitalarma.Ajustes.Titulo"
+                                android:text="@string/formato_24_horas" />
+
+                        </LinearLayout>
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/switchFormato24"
+                            style="@style/Vitalarma.Ajustes.Switch"
+                            android:contentDescription="@string/formato_24_horas" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                style="@style/Vitalarma.Ajustes.Seccion"
+                android:layout_marginTop="@dimen/space_6"
+                android:text="@string/accesibilidad" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/grupoAccesibilidad"
+                style="@style/Vitalarma.Ajustes.Grupo">
+
+                <LinearLayout style="@style/Vitalarma.Ajustes.Fila">
+
+                    <ImageView
+                        style="@style/Vitalarma.Ajustes.Icono"
+                        android:src="@drawable/ic_text_fields" />
+
+                    <LinearLayout style="@style/Vitalarma.Ajustes.Textos">
+
+                        <TextView
+                            style="@style/Vitalarma.Ajustes.Titulo"
+                            android:text="@string/texto_grande" />
+
+                        <TextView
+                            style="@style/Vitalarma.Ajustes.Descripcion"
+                            android:text="@string/aumenta_tamano_lectura" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/switchTextoGrande"
+                        style="@style/Vitalarma.Ajustes.Switch"
+                        android:contentDescription="@string/texto_grande" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        layout="@layout/view_bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/bottom_navigation_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
