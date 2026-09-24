@@ -285,6 +285,11 @@ public class CrearRecordatorioActivity extends AppCompatActivity {
                 return true;
             }
 
+            if (id == R.id.nav_pendientes) {
+                PendientesActivity.abrir(this);
+                return true;
+            }
+
             if (id == R.id.nav_hoy) {
                 volverAHoy();
                 return true;

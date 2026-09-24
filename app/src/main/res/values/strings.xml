@@ -73,4 +73,9 @@
     <string name="eliminar">Eliminar</string>
     <string name="recordatorio_completado">Recordatorio completado</string>
     <string name="permisos_activados">Permiso de alarmas prioritarias activado</string>
+    <string name="requieren_atencion">Requieren atención</string>
+    <string name="estado_vencido">Vencido</string>
+    <string name="hora_cita_ayer">Ayer · 3:00 p. m.</string>
+    <string name="comprar_tiquetes">Comprar tiquetes</string>
+    <string name="felicitar_diego">Felicitar a Diego</string>
 </resources>

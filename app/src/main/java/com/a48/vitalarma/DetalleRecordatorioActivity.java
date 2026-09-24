@@ -145,6 +145,11 @@ public class DetalleRecordatorioActivity extends AppCompatActivity {
         bottomNavigation.setOnItemReselectedListener(item -> abrirHoy());
 
         bottomNavigation.setOnItemSelectedListener(item -> {
+            if (item.getItemId() == R.id.nav_pendientes) {
+                PendientesActivity.abrir(this);
+                return false;
+            }
+
             if (item.getItemId() == R.id.nav_crear) {
                 startActivity(new Intent(
                         DetalleRecordatorioActivity.this,
