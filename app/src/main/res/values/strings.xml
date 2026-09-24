@@ -61,4 +61,16 @@
     <string name="repetir">Repetir</string>
     <string name="selecciona_un_aviso">Selecciona al menos un aviso</string>
     <string name="avisos_guardados">Avisos configurados</string>
+    <string name="detalle_recordatorio">Detalle del recordatorio</string>
+    <string name="permisos_listos">Permisos listos</string>
+    <string name="alarma_podra_sonar">La alarma podrá sonar</string>
+    <string name="activar">Activar</string>
+    <string name="completar">Completar</string>
+    <string name="posponer">Posponer</string>
+    <string name="reprogramar">Reprogramar</string>
+    <string name="editar">Editar</string>
+    <string name="pausar">Pausar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="recordatorio_completado">Recordatorio completado</string>
+    <string name="permisos_activados">Permiso de alarmas prioritarias activado</string>
 </resources>

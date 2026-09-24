@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
 
 public class HoyActivity extends AppCompatActivity {
 
@@ -20,6 +21,7 @@ public class HoyActivity extends AppCompatActivity {
 
         configurarNavegacion();
         configurarBotonCrear();
+        configurarTarjetas();
     }
 
     @Override
@@ -41,6 +43,21 @@ public class HoyActivity extends AppCompatActivity {
 
         btnCrear.setOnClickListener(
                 view -> abrirCrearRecordatorio()
+        );
+    }
+
+    private void configurarTarjetas() {
+        MaterialCardView cardProximaAlerta =
+                findViewById(R.id.cardProximaAlerta);
+        MaterialCardView cardRecordatorioActivo =
+                findViewById(R.id.cardRecordatorioActivo);
+
+        cardProximaAlerta.setOnClickListener(
+                view -> abrirDetalleRecordatorio(false)
+        );
+
+        cardRecordatorioActivo.setOnClickListener(
+                view -> abrirDetalleRecordatorio(true)
         );
     }
 
@@ -77,6 +94,12 @@ public class HoyActivity extends AppCompatActivity {
 
             return false;
         });
+    }
+
+    private void abrirDetalleRecordatorio(boolean activo) {
+        startActivity(
+                DetalleRecordatorioActivity.crearIntent(this, activo)
+        );
     }
 
     private void abrirCrearRecordatorio() {

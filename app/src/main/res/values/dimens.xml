@@ -6,10 +6,12 @@
     <dimen name="space_4">16dp</dimen>
     <dimen name="space_5">24dp</dimen>
     <dimen name="space_6">32dp</dimen>
+    <dimen name="space_7">40dp</dimen>
     <dimen name="corner_small">8dp</dimen>
     <dimen name="corner_medium">12dp</dimen>
     <dimen name="corner_large">16dp</dimen>
     <dimen name="top_bar_height">64dp</dimen>
     <dimen name="bottom_navigation_height">100dp</dimen><!--originalmente 80dp pero lo tuve que subir a 100dp porque con 80dp ocultaba los textos -->
     <dimen name="touch_target">48dp</dimen>
+    <dimen name="detalle_margen_tarjeta">80dp</dimen>
 </resources>
